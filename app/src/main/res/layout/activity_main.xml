@@ -4,27 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo3"
+    android:background="@color/gray"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryDark">
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="Control de Colecciones"
-            android:fontFamily="@font/bold"
-            android:textSize="35sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/extrabold"
             android:textColor="@color/white"
-            android:layout_margin="25dp"/>
-
+            android:textSize="30sp"
+            android:layout_marginTop="20dp"/>
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:layout_margin="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp"
             android:onClick="cambiar1"
             app:cardBackgroundColor="@color/gray"
             app:cardCornerRadius="15dp"
@@ -34,19 +37,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:background="@drawable/color1">
 
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_marginTop="18dp"
+                    android:layout_marginTop="10dp"
                     android:src="@drawable/coleccion" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:text="Mis Colecciones"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -60,7 +66,8 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
                 android:layout_row="0"
                 android:layout_rowWeight="1"
                 android:layout_column="0"
@@ -76,18 +83,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    android:background="@drawable/color1"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginTop="18dp"
+                        android:layout_marginTop="10dp"
                         android:src="@drawable/crear" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/bold"
+                        android:textColor="@color/white"
                         android:text="Crear"
                         android:textSize="25sp" />
                 </LinearLayout>
@@ -95,7 +105,8 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
                 android:layout_row="0"
                 android:layout_rowWeight="1"
                 android:layout_column="1"
@@ -110,25 +121,29 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    android:background="@drawable/color1"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginTop="18dp"
+                        android:layout_marginTop="10dp"
                         android:src="@drawable/buscar" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/bold"
+                        android:textColor="@color/white"
                         android:text="Buscar"
                         android:textSize="25sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
                 android:layout_row="1"
                 android:layout_rowWeight="1"
                 android:layout_column="0"
@@ -142,23 +157,27 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
+                    android:background="@drawable/color1"
                     android:gravity="center">
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/configurar"
-                        android:layout_marginTop="18dp"/>
+                        android:layout_marginTop="10dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Configurar"
+                        android:fontFamily="@font/bold"
+                        android:textColor="@color/white"
                         android:textSize="25sp"
-                        android:layout_marginTop="20dp"/>
+                        android:layout_marginTop="10dp"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
                 android:layout_row="1"
                 android:layout_rowWeight="1"
                 android:layout_column="1"
@@ -172,18 +191,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
+                    android:background="@drawable/color1"
                     android:gravity="center">
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/gmail_96px"
-                        android:layout_marginTop="18dp"/>
+                        android:layout_marginTop="10dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Compartir"
+                        android:fontFamily="@font/bold"
+                        android:textColor="@color/white"
                         android:textSize="25sp"
-                        android:layout_marginTop="20dp"/>
+                        android:layout_marginTop="10dp"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </GridLayout>
@@ -210,7 +232,7 @@
             android:layout_height="wrap_content"
             android:text="Carlos Humberto Meletz Chiyal"
             android:fontFamily="@font/light"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textColor="@color/white"
             android:layout_marginLeft="25dp"/>
         <TextView
@@ -218,7 +240,7 @@
             android:layout_height="wrap_content"
             android:text="Rudy Roberto Mendez Galindo"
             android:fontFamily="@font/light"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textColor="@color/white"
             android:layout_marginLeft="25dp"/>
         <TextView
@@ -226,7 +248,7 @@
             android:layout_height="wrap_content"
             android:text="Brandon Israel Chiroy"
             android:fontFamily="@font/light"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textColor="@color/white"
             android:layout_marginLeft="25dp"/>
         <TextView
@@ -234,7 +256,7 @@
             android:layout_height="wrap_content"
             android:text="Pablo Andres Guarcax"
             android:fontFamily="@font/light"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textColor="@color/white"
             android:layout_marginLeft="25dp"/>
     </LinearLayout>

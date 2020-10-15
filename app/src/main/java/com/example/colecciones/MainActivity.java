@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ConexionSQLite cone = new ConexionSQLite(this,"bd_colecciones",null,1);
     }
 
     public void cambiar1(View view){

@@ -9,17 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Compartir"></activity>
-        <activity android:name=".Configurar" />
-        <activity android:name=".Buscar" />
-        <activity android:name=".Crear" />
-        <activity android:name=".Registro" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Inicio">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Compartir" />
+        <activity android:name=".Configurar" />
+        <activity android:name=".Buscar" />
+        <activity android:name=".Crear" />
+        <activity android:name=".Registro" />
+        <activity android:name=".MainActivity">
         </activity>
     </application>
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,50 +7,83 @@
     android:layout_height="match_parent"
     tools:context=".Crear"
     android:orientation="vertical">
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Crear nueva Colección"
-        android:fontFamily="@font/regular"
-        android:textSize="25sp"
-        android:textAlignment="center"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="30dp"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crear nueva Colección"
+            android:fontFamily="@font/extrabold"
+            android:textSize="35sp"
+            android:textAlignment="center"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="30dp"/>
+        <EditText
+            android:id="@+id/etnombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/light"
+            android:layout_margin="20dp"
+            android:hint="Nombre de Colección"
+            android:textSize="25sp" />
+        <EditText
+            android:id="@+id/etpiezas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/light"
+            android:hint="Numero de piezas"
+            android:inputType="number"
+            android:textSize="25sp" />
+        <EditText
+            android:id="@+id/etcod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/light"
+            android:layout_margin="20dp"
+            android:hint="Codigo correlativo"
+            android:inputType="number"
+            android:textSize="25sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:fontFamily="@font/medium"
+            android:text="Guardar"
+            android:textSize="30sp" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginBottom="40dp"
+            app:cardBackgroundColor="@color/gray"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/add" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agregar piezas"
+                    android:textSize="25sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-    <EditText
-        android:id="@+id/etnombre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:hint="Nombre de Colección"
-        android:textSize="20sp" />
+    </LinearLayout>
 
-    <EditText
-        android:id="@+id/etpiezas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:hint="Numero de piezas"
-        android:inputType="number"
-        android:textSize="20sp" />
 
-    <EditText
-        android:id="@+id/etcod"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:hint="Codigo correlativo"
-        android:inputType="number"
-        android:textSize="20sp" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:fontFamily="@font/medium"
-        android:onClick="guardar"
-        android:text="Guardar"
-        android:textSize="20sp" />
-
-</LinearLayout>
+</ScrollView>
