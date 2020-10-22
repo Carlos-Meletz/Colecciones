@@ -1,37 +1,43 @@
 package com.example.colecciones.tablasdb;
 
-public class Colecctores {
-    private Integer codigo;
-    private String nombrecoleccion;
-    private Integer numpiezas;
+import java.io.Serializable;
 
-    public Colecctores(Integer codigo, String nombrecoleccion, Integer numpiezas) {
-        this.codigo = codigo;
-        this.nombrecoleccion = nombrecoleccion;
-        this.numpiezas = numpiezas;
+public class Colecctores implements Serializable {
+    private Integer id;
+    private String nombre;
+    private String num;
+
+    public Colecctores(Integer id, String nombre, String num) {
+        this.id = id;
+        this.nombre = nombre;
+        this.num = num;
     }
 
-    public Integer getCodigo() {
-        return codigo;
+    public Colecctores(){
+
     }
 
-    public void setCodigo(Integer codigo) {
-        this.codigo = codigo;
+    public Integer getId() {
+        return id;
     }
 
-    public String getNombrecoleccion() {
-        return nombrecoleccion;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public void setNombrecoleccion(String nombrecoleccion) {
-        this.nombrecoleccion = nombrecoleccion;
+    public String getNombre() {
+        return nombre;
     }
 
-    public Integer getNumpiezas() {
-        return numpiezas;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void setNumpiezas(Integer numpiezas) {
-        this.numpiezas = numpiezas;
+    public String getNum() {
+        return num;
+    }
+
+    public void setNum(String num) {
+        this.num = num;
     }
 }

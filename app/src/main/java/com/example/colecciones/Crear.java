@@ -3,6 +3,7 @@ package com.example.colecciones;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -21,7 +22,7 @@ public class Crear extends AppCompatActivity {
         et2 = (EditText) findViewById(R.id.etnombre);
         et3 = (EditText) findViewById(R.id.etpiezas);
     }
-    public void onClick(View view){
+    public void onClick1(View view){
         registrarColeccion();
     }
     private void registrarColeccion() {
@@ -33,9 +34,11 @@ public class Crear extends AppCompatActivity {
         values.put(Utilidades.CAMPO_NPIEZA,et3.getText().toString());
 
         Long idResultante = db.insert(Utilidades.TABLA_COlECCION,Utilidades.CAMPO_COD,values);
+
         Toast.makeText(getApplicationContext(),"Codigo Registro: "+idResultante,Toast.LENGTH_SHORT).show();
         db.close();
+        et1.setText("");
+        et2.setText("");
+        et3.setText("");
     }
-
-
 }

@@ -23,5 +23,12 @@ public class MainActivity extends AppCompatActivity {
         Intent avance = new Intent(this, Crear.class);
         startActivity(avance);
     }
-
+    public void cambiar3(View view){
+        Intent avance = new Intent(this, Buscar.class);
+        startActivity(avance);
+    }
+    public void cambiar4(View view){
+        Intent avance = new Intent(this, Agregar.class);
+        startActivity(avance);
+    }
 }
