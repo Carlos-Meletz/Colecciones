@@ -168,6 +168,7 @@
             android:layout_marginTop="10dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="5dp"
+            android:onClick="cambiar5"
             app:cardBackgroundColor="@color/gray">                >
             <LinearLayout
                 android:layout_width="match_parent"

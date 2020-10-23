@@ -31,4 +31,8 @@ public class MainActivity extends AppCompatActivity {
         Intent avance = new Intent(this, Agregar.class);
         startActivity(avance);
     }
+    public void cambiar5(View view){
+        Intent avance = new Intent(this, Compartir.class);
+        startActivity(avance);
+    }
 }
