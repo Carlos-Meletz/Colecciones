@@ -14,13 +14,6 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    repositories {
-        jcenter()
-        maven {
-            url "https://maven.java.net/content/groups/public/"
-        }
-    }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -30,8 +23,6 @@ android {
 }
 
 dependencies {
-    compile 'com.sun.mail:android-mail:1.5.5'
-    compile 'com.sun.mail:android-activation:1.5.5'
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'

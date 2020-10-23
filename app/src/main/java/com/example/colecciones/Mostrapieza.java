@@ -44,7 +44,7 @@ public class Mostrapieza extends AppCompatActivity {
             campoPieza.setText("Maximo de Piezas:  "+piezas.getNum());
         }
         consultarLista();
-        ArrayAdapter adaptor = new ArrayAdapter(this, android.R.layout.simple_list_item_multiple_choice,listaInformacion);
+        ArrayAdapter adaptor = new ArrayAdapter(this, R.layout.estilo_multiple,listaInformacion);
         lvtabla2.setAdapter(adaptor);
     }
     private void consultarLista() {

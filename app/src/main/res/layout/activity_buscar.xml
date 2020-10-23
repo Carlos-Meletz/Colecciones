@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/colorPrimaryDark"
     android:layout_height="match_parent"
     tools:context=".Buscar">
     <LinearLayout
@@ -14,6 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Buscar por"
+        android:textColor="@color/white"
         android:fontFamily="@font/bold"
         android:textSize="35sp"
         android:textAlignment="center"
@@ -30,6 +32,7 @@
                 android:layout_width="80dp"
                 android:checked="true"
                 android:layout_height="match_parent"
+                android:textColor="@color/gray"
                 android:text="ID"
                 android:layout_marginRight="30dp"
                 android:fontFamily="@font/medium"
@@ -37,6 +40,7 @@
             <RadioButton
                 android:id="@+id/rbt2"
                 android:layout_width="140dp"
+                android:textColor="@color/gray"
                 android:layout_height="match_parent"
                 android:text="Nombre"
                 android:fontFamily="@font/medium"
@@ -49,6 +53,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="40dp"
             android:fontFamily="@font/regular"
+            android:textColor="@color/gray"
+            android:textColorHint="@color/gray"
             android:hint="Buscar"
             android:textSize="25sp" />
 
@@ -58,6 +64,7 @@
             android:layout_height="60dp"
             android:layout_marginLeft="40dp"
             android:onClick="onClick"
+            android:background="@drawable/color1"
             android:layout_marginRight="40dp"
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/extrabold"
@@ -69,6 +76,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="gone"
+            android:textColor="@color/gray"
+            android:textColorHint="@color/gray"
             android:layout_margin="15dp"
             android:fontFamily="@font/semibold"
             android:textAlignment="center"
@@ -80,6 +89,8 @@
             android:layout_height="wrap_content"
             android:visibility="gone"
             android:layout_margin="15dp"
+            android:textColor="@color/gray"
+            android:textColorHint="@color/gray"
             android:fontFamily="@font/semibold"
             android:textAlignment="center"
             android:textSize="30sp" />
@@ -112,7 +123,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/color1"
+                    android:background="@drawable/color2"
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -153,7 +164,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/color1"
+                    android:background="@drawable/color5"
                     android:gravity="center"
                     android:orientation="vertical">
 

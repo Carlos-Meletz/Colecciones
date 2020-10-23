@@ -40,7 +40,7 @@ public class Agregar extends AppCompatActivity {
 
         conn = new ConexionSQLite(getApplicationContext(),"bd_colecciones",null,1);
         consultarLista();
-        ArrayAdapter<CharSequence> adaptor = new ArrayAdapter(this, android.R.layout.simple_list_item_1,listaInformacion);
+        ArrayAdapter<CharSequence> adaptor = new ArrayAdapter(this, R.layout.estilo_spinner,listaInformacion);
         combocole.setAdapter(adaptor);
 
         combocole.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -74,6 +74,8 @@ public class Agregar extends AppCompatActivity {
 
             Toast.makeText(getApplicationContext(),"Id registro: "+idResul,Toast.LENGTH_SHORT).show();
             db.close();
+            edt1.setText("");
+            edt2.setText("");
         }else{
             Toast.makeText(getApplicationContext(),"Debe seleccionar una Coleccion",Toast.LENGTH_LONG).show();
         }

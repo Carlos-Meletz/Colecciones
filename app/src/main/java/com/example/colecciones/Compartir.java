@@ -27,9 +27,10 @@ public class Compartir extends AppCompatActivity {
     ArrayList<String> listaInformacion;
     ArrayList<String> listaInformacion2;
     ArrayList<Piezas> pieza;
-    int aux,var;
     ArrayList<Colecctores> coleccion;
     ConexionSQLite conn;
+    String aux="";
+    int var;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,33 +42,32 @@ public class Compartir extends AppCompatActivity {
         spn1 = (Spinner) findViewById(R.id.spinercolecciones);
         conn = new ConexionSQLite(getApplicationContext(),"bd_colecciones",null,1);
         consultarLista();
-        //consultarPiezas();
-        ArrayAdapter<CharSequence> adaptor = new ArrayAdapter(this, android.R.layout.simple_list_item_1,listaInformacion);
+        consultarPiezas();
+        ArrayAdapter<CharSequence> adaptor = new ArrayAdapter(this, R.layout.estilo_spinner,listaInformacion);
         spn1.setAdapter(adaptor);
+
         spn1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long idl) {
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
         });
-        //int idcombo = (int) spn1.getSelectedItemId();
-        //var = coleccion.get(idcombo-1).getId();
     }
 
     public void sendEmail(View view){
-            String TO = et1.getText().toString(); //aquí pon tu correo
+            String TO = et1.getText().toString();
             String CC = et2.getText().toString();
             Intent emailIntent = new Intent(Intent.ACTION_SEND);
             emailIntent.setData(Uri.parse("mailto:"));
             emailIntent.setType("text/plain");
             emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
             emailIntent.putExtra(Intent.EXTRA_CC, CC);
-// Esto podrás modificarlo si quieres, el asunto y el cuerpo del mensaje
             emailIntent.putExtra(Intent.EXTRA_SUBJECT, et3.getText().toString());
-            String spin = et4.getText().toString()+"\n\nColeccion: "+spn1.getSelectedItem().toString()+"\n"+listaInformacion2;
-            emailIntent.putExtra(Intent.EXTRA_TEXT, spin);
+            String spin = et4.getText().toString()+"\n\nColeccion: "+spn1.getSelectedItem().toString()+"\n";
+            emailIntent.putExtra(Intent.EXTRA_TEXT, spin +"\n"+aux);
 
             try {
                 startActivity(Intent.createChooser(emailIntent, "Enviar email..."));
@@ -109,8 +109,8 @@ public class Compartir extends AppCompatActivity {
             listaInformacion.add("Codigo: "+ coleccion.get(i).getId()+" -> "+coleccion.get(i).getNombre()+" -> "
                     +coleccion.get(i).getNum()+" piezas.");
         }
-    }
 
+    }
 
     private void consultarPiezas() {
         SQLiteDatabase db=conn.getReadableDatabase();
@@ -133,13 +133,15 @@ public class Compartir extends AppCompatActivity {
     }
 
     private void obtenerLista2() {
-        int aux;
-        listaInformacion2 = new ArrayList<String>();
+
+        long dato =  (spn1.getSelectedItemId());
+        var = coleccion.get((int)dato).getId();
+        int aux2;
         for (int i = 0; i < pieza.size(); i++) {
-            aux = pieza.get(i).getIdcole();
-            if (aux == var) {
-                listaInformacion2.add("ID: " + pieza.get(i).getId2() + "  |  Cod: " + pieza.get(i).getCod_pie() + "  |  Nom: " + pieza.get(i).getNom_pieza() + "  |  Cole_ID: "
-                        + pieza.get(i).getIdcole());
+            aux2 = pieza.get(i).getIdcole();
+            if(aux2 == var){
+            aux = aux + "ID: " + pieza.get(i).getId2() + "  |  Cod: " + pieza.get(i).getCod_pie() + "  |  Nom: " + pieza.get(i).getNom_pieza() + "  |  Cole_ID: "
+                    + pieza.get(i).getIdcole()+"\n";
             }
         }
     }

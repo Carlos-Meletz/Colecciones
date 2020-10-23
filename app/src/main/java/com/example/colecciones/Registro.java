@@ -27,7 +27,7 @@ public class Registro extends AppCompatActivity {
         lvtabla = (ListView) findViewById(R.id.listViewTabla);
         conn = new ConexionSQLite(getApplicationContext(),"bd_colecciones",null,1);
         consultarLista();
-        ArrayAdapter adaptor = new ArrayAdapter(this, android.R.layout.simple_list_item_1,listaInformacion);
+        ArrayAdapter adaptor = new ArrayAdapter(this, R.layout.estilo,listaInformacion);
         lvtabla.setAdapter(adaptor);
 
         lvtabla.setOnItemClickListener(new AdapterView.OnItemClickListener() {
