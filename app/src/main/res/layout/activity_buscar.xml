@@ -54,7 +54,7 @@
             android:layout_margin="40dp"
             android:fontFamily="@font/regular"
             android:textColor="@color/gray"
-            android:textColorHint="@color/gray"
+            android:textColorHint="@color/b2"
             android:hint="Buscar"
             android:textSize="25sp" />
 

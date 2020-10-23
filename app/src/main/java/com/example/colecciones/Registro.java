@@ -11,13 +11,17 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import com.example.colecciones.tablasdb.Colecctores;
+import com.example.colecciones.utilidades.MyAdapter;
 import com.example.colecciones.utilidades.Utilidades;
 
 import java.util.ArrayList;
 
 public class Registro extends AppCompatActivity {
     ListView lvtabla;
-    ArrayList<String> listaInformacion;
+    ArrayList<String> listaInformacion1;
+    ArrayList<String> listaInformacion2;
+    ArrayList<String> listaInformacion3;
+
     ArrayList<Colecctores> coleccion;
     ConexionSQLite conn;
     @Override
@@ -27,7 +31,8 @@ public class Registro extends AppCompatActivity {
         lvtabla = (ListView) findViewById(R.id.listViewTabla);
         conn = new ConexionSQLite(getApplicationContext(),"bd_colecciones",null,1);
         consultarLista();
-        ArrayAdapter adaptor = new ArrayAdapter(this, R.layout.estilo,listaInformacion);
+        //ArrayAdapter adaptor = new ArrayAdapter(this, R.layout.estilo,listaInformacion);
+        MyAdapter adaptor = new MyAdapter(this,listaInformacion1,listaInformacion2,listaInformacion3);
         lvtabla.setAdapter(adaptor);
 
         lvtabla.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -62,10 +67,14 @@ public class Registro extends AppCompatActivity {
     }
 
     private void obtenerLista() {
-        listaInformacion=new ArrayList<String>();
+        listaInformacion1 =new ArrayList<String>();
+        listaInformacion2 =new ArrayList<String>();
+        listaInformacion3 =new ArrayList<String>();
+
         for (int i=0; i<coleccion.size();i++){
-            listaInformacion.add("Codigo: "+ coleccion.get(i).getId()+" -> "+coleccion.get(i).getNombre()+" -> "
-                    +coleccion.get(i).getNum()+" piezas.");
+            listaInformacion1.add("Nombre: "+coleccion.get(i).getNombre());
+            listaInformacion2.add("Codigo: "+coleccion.get(i).getId());
+            listaInformacion3.add("Max Piezas: "+coleccion.get(i).getNum());
         }
 
     }

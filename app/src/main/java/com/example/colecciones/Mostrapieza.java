@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.colecciones.tablasdb.Colecctores;
 import com.example.colecciones.tablasdb.Piezas;
+import com.example.colecciones.utilidades.MyAdapter;
 import com.example.colecciones.utilidades.Utilidades;
 
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ public class Mostrapieza extends AppCompatActivity {
     TextView campoId,campoNombre,campoPieza;
     ListView lvtabla2;
     ArrayList<String> listaInformacion;
+
     ArrayList<Piezas> pieza;
     ConexionSQLite conn;
     int var;
@@ -44,6 +46,7 @@ public class Mostrapieza extends AppCompatActivity {
             campoPieza.setText("Maximo de Piezas:  "+piezas.getNum());
         }
         consultarLista();
+        //MyAdapter adaptor = new MyAdapter(this,listaInformacion,listaInformacion2,listaInformacion3);
         ArrayAdapter adaptor = new ArrayAdapter(this, R.layout.estilo_multiple,listaInformacion);
         lvtabla2.setAdapter(adaptor);
     }
@@ -73,8 +76,7 @@ public class Mostrapieza extends AppCompatActivity {
         for (int i=0; i<pieza.size();i++){
             aux = pieza.get(i).getIdcole();
             if(aux == var) {
-                listaInformacion.add("ID: " + pieza.get(i).getId2() + "  |  Cod: " + pieza.get(i).getCod_pie() + "  |  Nom: " + pieza.get(i).getNom_pieza() + "  |  Cole_ID: "
-                        + pieza.get(i).getIdcole());
+                listaInformacion.add("Nombre: " + pieza.get(i).getNom_pieza()+ "\nID: " + pieza.get(i).getId2()+"\nCodigo: " + pieza.get(i).getCod_pie()+"\n");
             }
         }
 

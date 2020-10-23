@@ -37,24 +37,37 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="25dp"
+                android:orientation="horizontal"
                 android:background="@drawable/color1">
-
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:src="@drawable/coleccion" />
-
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Mis Colecciones"
-                    android:fontFamily="@font/bold"
-                    android:textColor="@color/white"
-                    android:textSize="25sp" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mis Colecciones"
+                        android:fontFamily="@font/bold"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="25dp"
+                        android:text="Ver registro de todas las colecciones creadas"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -72,24 +85,38 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
+                android:gravity="center_vertical"
+                android:paddingLeft="25dp"
                 android:background="@drawable/color4"
-                android:orientation="vertical">
-
+                android:orientation="horizontal">
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:src="@drawable/crear" />
-
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/bold"
-                    android:textColor="@color/white"
-                    android:text="Crear"
-                    android:textSize="25sp" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="25dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Crear"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/bold"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="25dp"
+                        android:text="Crea y configura una nueva colección"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -107,24 +134,38 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
+                android:gravity="center_vertical"
+                android:paddingLeft="25dp"
                 android:background="@drawable/color2"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:src="@drawable/add" />
-
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/bold"
-                    android:textColor="@color/white"
-                    android:text="Agregar"
-                    android:textSize="25sp" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="25dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Agregar"
+                        android:fontFamily="@font/bold"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="25dp"
+                        android:text="Agrega y configura piezas para una colección"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -141,22 +182,37 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp"
                 android:background="@drawable/color3"
-                android:gravity="center">
+                android:gravity="center_vertical">
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/buscar"
-                    android:layout_marginTop="10dp"/>
-                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/buscar" />
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Buscar"
-                    android:fontFamily="@font/bold"
-                    android:textColor="@color/white"
-                    android:textSize="25sp"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="25dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Buscar"
+                        android:fontFamily="@font/bold"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="25dp"
+                        android:text="Buscar y editar coleccion en la base de datos"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -173,22 +229,37 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp"
                 android:background="@drawable/color5"
-                android:gravity="center">
+                android:gravity="center_vertical">
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/gmail_96px"
-                    android:layout_marginTop="10dp"/>
-                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/gmail_96px" />
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Compartir"
-                    android:fontFamily="@font/bold"
-                    android:textColor="@color/white"
-                    android:textSize="25sp"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="25dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Compartir"
+                        android:fontFamily="@font/bold"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="25dp"
+                        android:text="Comparte cualquier colección a otras personas"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/light"
             android:textColor="@color/gray"
-            android:textColorHint="@color/gray"
+            android:textColorHint="@color/b2"
             android:layout_margin="20dp"
             android:hint="Nombre de Colección"
             android:textSize="25sp" />
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:textColor="@color/gray"
-            android:textColorHint="@color/gray"
+            android:textColorHint="@color/b2"
             android:fontFamily="@font/light"
             android:hint="Numero de piezas"
             android:inputType="number"
@@ -50,7 +50,7 @@
             android:fontFamily="@font/light"
             android:layout_margin="20dp"
             android:textColor="@color/gray"
-            android:textColorHint="@color/gray"
+            android:textColorHint="@color/b2"
             android:hint="Codigo correlativo"
             android:inputType="number"
             android:textSize="25sp" />
