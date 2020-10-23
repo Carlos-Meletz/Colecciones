@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.colecciones.tablasdb.Colecctores;
 import com.example.colecciones.tablasdb.Piezas;
@@ -15,18 +16,35 @@ import com.example.colecciones.utilidades.Utilidades;
 import java.util.ArrayList;
 
 public class Mostrapieza extends AppCompatActivity {
+    TextView campoId,campoNombre,campoPieza;
     ListView lvtabla2;
     ArrayList<String> listaInformacion;
     ArrayList<Piezas> pieza;
     ConexionSQLite conn;
+    int var;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrapieza);
-        lvtabla2 = (ListView) findViewById(R.id.listViewTabla2);
         conn = new ConexionSQLite(getApplicationContext(),"bd_colecciones",null,1);
+
+        campoId = (TextView) findViewById(R.id.box1);
+        campoNombre = (TextView) findViewById(R.id.box2);
+        campoPieza = (TextView) findViewById(R.id.box3);
+
+        lvtabla2 = (ListView) findViewById(R.id.listViewTabla2);
+        Bundle objetoEnviado=getIntent().getExtras();
+        Colecctores piezas=null;
+
+        if(objetoEnviado!=null){
+            piezas= (Colecctores) objetoEnviado.getSerializable("coleccion");
+            var = piezas.getId();
+            campoId.setText("Codigo:  "+piezas.getId().toString());
+            campoNombre.setText("Nombre de Coleccion:  "+piezas.getNombre());
+            campoPieza.setText("Maximo de Piezas:  "+piezas.getNum());
+        }
         consultarLista();
-        ArrayAdapter adaptor = new ArrayAdapter(this, android.R.layout.simple_list_item_1,listaInformacion);
+        ArrayAdapter adaptor = new ArrayAdapter(this, android.R.layout.simple_list_item_multiple_choice,listaInformacion);
         lvtabla2.setAdapter(adaptor);
     }
     private void consultarLista() {
@@ -50,10 +68,14 @@ public class Mostrapieza extends AppCompatActivity {
     }
 
     private void obtenerLista() {
+        int aux;
         listaInformacion=new ArrayList<String>();
         for (int i=0; i<pieza.size();i++){
-            listaInformacion.add("ID: "+ pieza.get(i).getId2()+"  |  Cod: "+pieza.get(i).getCod_pie()+"  |  Nom: "+pieza.get(i).getNom_pieza()+"  |  Cole_ID: "
-                    +pieza.get(i).getIdcole());
+            aux = pieza.get(i).getIdcole();
+            if(aux == var) {
+                listaInformacion.add("ID: " + pieza.get(i).getId2() + "  |  Cod: " + pieza.get(i).getCod_pie() + "  |  Nom: " + pieza.get(i).getNom_pieza() + "  |  Cole_ID: "
+                        + pieza.get(i).getIdcole());
+            }
         }
 
     }

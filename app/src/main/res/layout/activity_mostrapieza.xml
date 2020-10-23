@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Mostrapieza">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -14,9 +15,31 @@
         android:textSize="30sp"
         android:textAlignment="center"
         android:fontFamily="@font/extrabold"/>
+    <TextView
+        android:id="@+id/box1"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@font/regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+    <TextView
+        android:id="@+id/box2"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@font/regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+    <TextView
+        android:id="@+id/box3"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@font/regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
     <ListView
         android:id="@+id/listViewTabla2"
         android:layout_margin="5dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:choiceMode="multipleChoice"/>
 </LinearLayout>
