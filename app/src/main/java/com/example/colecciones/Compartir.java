@@ -76,7 +76,6 @@ public class Compartir extends AppCompatActivity {
                 Toast.makeText(Compartir.this,
                         "No tienes clientes de email instalados.", Toast.LENGTH_SHORT).show();
             }
-
     }
     private void consultarLista() {
         SQLiteDatabase db=conn.getReadableDatabase();

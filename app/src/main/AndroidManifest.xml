@@ -19,7 +19,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".Compartir" />
-        <activity android:name=".Configurar" />
         <activity android:name=".Buscar" />
         <activity android:name=".Crear" />
         <activity android:name=".Registro" />
